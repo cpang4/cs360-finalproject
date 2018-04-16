@@ -16,59 +16,60 @@ h1 {letter-spacing: 6px}
 </style>
 <body>
 
-<!-- !PAGE CONTENT! -->
-<div class="w3-content" style="max-width:1500px">
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-content" style="max-width:1500px">
 
-<!-- Header -->
-<header class="w3-panel w3-center w3-opacity" style="padding:20px 16px">
-  <h1 class="w3-xlarge">A VISUALIZATION OF <b>SKYSCRAPERS</b></h1>
-  <h2>by Claire Pang and Vi Le</h2>
-  
-  <div class="w3-padding-32">
-    <div class="w3-bar w3-border">
-      <a href="https://cpang4.github.io/cs360-finalproject/" class="w3-bar-item w3-button">Home</a>
+    <!-- Header -->
+    <header class="w3-panel w3-center w3-opacity" style="padding:20px 16px">
+      <h1 class="w3-xlarge">A VISUALIZATION OF <b>SKYSCRAPERS</b></h1>
+      <h2>by Claire Pang and Vi Le</h2>
+      
+      <div class="w3-padding-32">
+        <div class="w3-bar w3-border">
+          <a href="https://cpang4.github.io/cs360-finalproject/" class="w3-bar-item w3-button">Home</a>
       <!--<a href="#" class="w3-bar-item w3-button w3-light-grey">Process Book</a>
-      <a href="#" class="w3-bar-item w3-button">About</a> -->
+        <a href="#" class="w3-bar-item w3-button">About</a> -->
+      </div>
     </div>
+  </header>
+
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="info">
+    <h2>Note: Project in process! Check back in May for the finished product.</h2><br>
+    <p class="w3-justify"><b>Background and Motivation</b><br>
+      When you are asked to think of skyscrapers, your immediate thought may be of a famous building.  From the Empire State Building in NYC to the Space Needle in Seattle, they are all very grand.  But, can they tell us anything about the communities they are located in?<br>
+      With the amount of free land space shrinking in the United States, buildings have been building upwards rather than outwards. This is an increasing trend, if not problem, in metropolitan cities such as San Francisco and New York. Likely, skyscraper construction will continue in order to meet housing demands, which will play a role in reshaping the iconic skylines of major cities.<br>
+    Skyscrapers are generally filled with offices.  With an increase in the number of workers in the area, we also expect an increase in the number of residential buildings.  Residents, in turn, need something to do besides go to work. This can be anything from movie theatres to museums to casinos. These major centers also attract non-locals into the city who then require hotels to stay in. We would like to examine the evolution of skyscraper construction in the United States through an interactive data visualization.</p>
+
+    <p class="w3-justify"><b>Project Objectives</b><br>
+      <i>Note: We are defining a skyscraper as any building with height ≥ 130m.</i><br>
+      Which are the tallest buildings in the US? (and how tall are they, relative to other tall buildings in this dataset?)<br>
+      Where are the tallest buildings in the US? Does a certain city/state have the most tall buildings?<br>
+      What are the purposes of these skyscrapers (casinos, offices, hotels, residential, etc)?<br>
+      Is there a constant positive trend for the amount of skyscrapers constructed, or has construction halted?<br>
+    </p>
+
+    <p class="w3-justify">
+      <b>Data</b><br>
+      We are using the <a href ="https://think.cs.vt.edu/corgis/csv/skyscrapers/skyscrapers.html">Corgis Skyscrapers dataset.</a>
+      <br> We have done some data processing for this project. The new dataset is available in our <a href = "https://github.com/cpang4/cs360-finalproject/tree/master/data" target="_blank">github repo.</a>
+    </p>
+
+    <p class="w3-justify">
+      <b>Visualization prototypes so far (not yet the final)</b><br>
+      <a href ="http://bl.ocks.org/cpang4/1bdaac0f2a8edd7c5c0040eca7d1cd6f" target="_blank">Icon array </a> <br><i>(Note: Because a skyscraper can take on more than 1 purpose, the icons do not necessarily add up to 100%)</i><br>
+      <a href="http://bl.ocks.org/cpang4/79970d83ae6fa09e60a67fce63775003" target="_blank">Map</a>
+      <iframe src="http://bl.ocks.org/cpang4/79970d83ae6fa09e60a67fce63775003" marginwidth="600" marginheight="400" scrolling="no"></iframe>
+
+
+    </div>
+    
+    <!-- End Page Content -->
   </div>
-</header>
 
-<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="info">
-<h2>Note: Project in process! Check back in May for the finished product.</h2><br>
-<p class="w3-justify"><b>Background and Motivation</b><br>
-When you are asked to think of skyscrapers, your immediate thought may be of a famous building.  From the Empire State Building in NYC to the Space Needle in Seattle, they are all very grand.  But, can they tell us anything about the communities they are located in?<br>
-With the amount of free land space shrinking in the United States, buildings have been building upwards rather than outwards. This is an increasing trend, if not problem, in metropolitan cities such as San Francisco and New York. Likely, skyscraper construction will continue in order to meet housing demands, which will play a role in reshaping the iconic skylines of major cities.<br>
-Skyscrapers are generally filled with offices.  With an increase in the number of workers in the area, we also expect an increase in the number of residential buildings.  Residents, in turn, need something to do besides go to work. This can be anything from movie theatres to museums to casinos. These major centers also attract non-locals into the city who then require hotels to stay in. We would like to examine the evolution of skyscraper construction in the United States through an interactive data visualization.</p>
-
-<p class="w3-justify"><b>Project Objectives</b><br>
-<i>Note: We are defining a skyscraper as any building with height ≥ 130m.</i><br>
-Which are the tallest buildings in the US? (and how tall are they, relative to other tall buildings in this dataset?)<br>
-Where are the tallest buildings in the US? Does a certain city/state have the most tall buildings?<br>
-What are the purposes of these skyscrapers (casinos, offices, hotels, residential, etc)?<br>
-Is there a constant positive trend for the amount of skyscrapers constructed, or has construction halted?<br>
-</p>
-
-<p class="w3-justify">
-<b>Data</b><br>
-We are using the <a href ="https://think.cs.vt.edu/corgis/csv/skyscrapers/skyscrapers.html">Corgis Skyscrapers dataset.</a>
-<br> We have done some data processing for this project. The new dataset is available in our <a href = "https://github.com/cpang4/cs360-finalproject/tree/master/data" target="_blank">github repo.</a>
-</p>
-
-<p class="w3-justify">
-<b>Visualization prototypes so far (not yet the final)</b><br>
-<a href ="http://bl.ocks.org/cpang4/1bdaac0f2a8edd7c5c0040eca7d1cd6f" target="_blank">Icon array </a> <br><i>(Note: Because a skyscraper can take on more than 1 purpose, the icons do not necessarily add up to 100%)</i><br>
-<a href="http://bl.ocks.org/cpang4/79970d83ae6fa09e60a67fce63775003" target="_blank">Map</a>
-
-
-</div>
-  
-<!-- End Page Content -->
-</div>
-
-<!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-large"> 
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-</footer>
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-large"> 
+    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+  </footer>
 
 </body>
 </html>
