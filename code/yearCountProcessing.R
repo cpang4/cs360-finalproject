@@ -105,6 +105,36 @@ for (i in 1:nrow(df)){
   }
 }
 df <- cbind(df, tempvec)
-colnames(df) <- c("year", "cumulative", "hotel", "office", "residential")
+colnames(df) <- c("year", "all", "hotel", "office", "residential")
 write.csv(df, file="skyscrapers-count.csv")
+
+cities <- c("All", "Atlanta", "Boston", "Chicago", "Dallas", "Detroit", "Houston", "Jersey City", "Las Vegas", "Los Angeles", "Miami", "New York City", "Philadelphia", "Pittsburgh", "San Francisco", "Seattle")
+cityDF <- data.frame()
+
+for (city in 1:length(cities)){
+
+  if (cities[city] == "All"){
+    temp <-data.frame()
+    for (i in 1:10){
+      temp <- rbind(temp, data[i,])
+    }
+    cityDF <- rbind(cityDF, temp)
+  }
+  else {
+    temp <- data.frame()
+    cityInd <- which(data$city == cities[city])
+    for (i in 1:10){
+      temp <- rbind(temp, data[cityInd[i],])
+    }
+    cityDF <- rbind(cityDF, temp)
+  }
+}
+category <- c()
+for (city in 1:length(cities)){
+  for (i in 1:10){
+    category <- c(category, cities[city]) 
+  }
+}
+cityDF <- cbind(category, cityDF)
+write.csv(cityDF, file="skyscrapers-top10.csv")
 
