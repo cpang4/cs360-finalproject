@@ -21,7 +21,7 @@ var xScaleBar = d3.scaleBand()
   var yAxisBar = d3.axisLeft()
     .scale(yScaleBar);
 
-d3.csv("skyscrapers-top10.csv", function(data){
+d3.csv("data/skyscrapers-top10.csv", function(data){
 
   var cities = ["All", "Atlanta", "Boston", "Chicago", "Dallas", "Detroit", "Houston", "Jersey City", "Las Vegas", "Los Angeles", "Miami", "New York City", "Philadelphia", "Pittsburgh", "San Francisco", "Seattle"];
 
