@@ -12,10 +12,9 @@ var mainPurposes = ["hotel", "office", "residential", "other"];
 
 var otherPurposes = ["abandoned", "airtraffic", "belltower", "bridge", "casino", "commercial", "education", "exhibition", "government", "industrial", "library", "observation", "religious", "telecommunications", "museum", "retail", "hospital"];
 
-//var colorScale = d3.scaleOrdinal(d3.schemeAccent);
 var colorMap = {"hotel": d3.rgb("#7fc97f"), "residential":d3.rgb("#fdc086"), "office":d3.rgb("#beaed4"), "other":d3.rgb("#f0027f")};
 
-d3.csv("skyscrapers-main.csv", function(error, data)
+d3.csv("data/skyscrapers-main.csv", function(error, data)
 {
   addFilter();
   var totalsMap = getTotals("All");
