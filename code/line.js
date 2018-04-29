@@ -28,7 +28,7 @@ var line = d3.line()
 // will keep track of which purpose is being shown and full name of purpose
 var purpMap = {};
 
-d3.csv("skyscrapers-count.csv", type, function(error, data) {
+d3.csv("data/skyscrapers-count.csv", type, function(error, data) {
   if (error) throw error;
 
   var purposes = data.columns.slice(1).map(function(id) {
