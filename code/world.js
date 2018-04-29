@@ -62,7 +62,7 @@ var svg_world = d3.select("#viz5").select("#worldBar")
 
   var filters_world = ["Top 1-10", "Top 11-20"];
 
-    d3.csv("world.csv", function(data){
+    d3.csv("data/world.csv", function(data){
 
       addFilterWorld();
 
