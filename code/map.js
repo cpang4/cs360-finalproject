@@ -31,8 +31,8 @@ legend.append("text")
     .text(function(d) {return d.value});
 
 d3.queue()
-  .defer(d3.json, 'us.json')
-  .defer(d3.csv, 'skyscrapers-main.csv')
+  .defer(d3.json, 'data/us.json')
+  .defer(d3.csv, 'data/skyscrapers-main.csv')
   .await(makeMyMap);
 
 function makeMyMap(error, us, skyscrapers){
