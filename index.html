@@ -76,7 +76,7 @@
 			<section>
 				<h2>Data</h2>
 				<p>We are using the <a href="https://think.cs.vt.edu/corgis/csv/skyscrapers/skyscrapers.html">CORGIS Skyscrapers dataset.</a>
-				<br>There was a signifcant amount of data processing required for this project, which can be read about in our <a href="#">process book</a>.
+				<br>There was a signifcant amount of data processing required for this project, which can be read about in our <a href="processBook.html">process book</a>.
 				<br>The processed datasets that we used are available in our <a href="https://github.com/cpang4/cs360-finalproject/tree/master/data">github repo</a>.</p><br>
 		</section>
 	</div>
@@ -86,8 +86,8 @@
 			<section>
 				<h2>Skyscraper construction over the years</h2>
 				<p> The line chart below shows the number of skyscrapers cumlatively existing in the US over the years.
-				<br><i>Hover</i> over a category name for brushing (other lines will be grayed out)
-				<br><i>Click</i> on a category name to remove it, and click again to bring it back</p><br>
+				<br><i>Hover</i> over a category name for brushing (other lines will be grayed out).
+				<br><i>Click</i> on a category name to remove it, and click again to bring it back.</p><br>
 		</section>
 	</div>
 
@@ -104,14 +104,18 @@
 <!-- Analysis of line chart -->
 <div class="container">
 			<section>
-				<p> Placeholder analysis</p><br>
+				<p>Until the 1970's, it seems that there was not a burst in skyscraper construction.
+					<br> There was a minor slowdown in 1990's in skyscraper construction, but again a burst in the 2000's.
+					<br>Until the 1990's, most of the skyscraper construction was due to office. However, office construction has slowed down since the 1990's and instead been replaced by residential construction.
+					<br>Based on the growth we have seen in the 2000's, it is not unexpected that the growth of skyscrapers in the U.S. continues rapidly.</p><br>
 		</section>
 	</div>
 
 <!-- Header for map -->
 <div class="container">
 			<section><h2>Breakdown by city</h2>
-				<p> Use the slider below to see how many skyscrapers existed in a city during a given year.</p><br><br>
+				<p> Use the slider below to see how many skyscrapers existed in a city during a given year.
+					<br><i>Hover</i> over a circle for city name + count.</p><br><br>
 		</section>
 	</div>
 
@@ -135,7 +139,8 @@ slider.oninput = function() {
 
 <!-- Map analysis -->
 <div class="container">
-				<p>placeholder for analysis</p><br>
+				<p>It seems that every major city has at least one skyscraper. New York has a lead on all other cities in terms of skyscraper count. The closest competitor is Chicago, but in 2016 Chicago still has ~120 fewer skyscrapers.
+				<br>New York was ahead of the skyscraper construction game, with ~70 already in the 1940's. By then, most major cities only had 1-2 skyscrapers, or none at all. It was not until the 1990's that every major city had at least 1 skyscraper. Some states, by 2016, still do not have any skyscrapers. </p><br>
 		</section>
 	</div>
 
@@ -143,7 +148,7 @@ slider.oninput = function() {
 <div class="container">
 			<section><h2>Breakdown by category, by city</h2>
 				<p>See what skyscrapers are used for overall & in the 6 cities with the most skyscrapers.
-				<br>If a city contains more than 1 skyscraper in "other", <i>hover</i> over the grid for more information.</p><br>
+				<br>If a city contains at least 1 skyscraper in "other", <i>hover</i> over the grid for more information.</p><br>
 		</section>
 	</div>
 
@@ -159,7 +164,7 @@ slider.oninput = function() {
 			<section><p>Based on "All", we can see that U.S. skyscrapers are mainly used for <i>office</i>, then <i> residential</i>, and then <i>hotel</i>.
 			<br>It is interesting to see the makeup of what skyscrapers are used as you compare city by city.
 				<br>When you look at San Francisco, a tech hub, it makes sense that 75% of skyscrapers are used as offices. This majority is also found in Houston, where 87% are used as offices.
-				<br>Whereas in Las Vegas, skyscrapers are primarily residential or hotels (located in the Las Vegas Strip).
+				<br>Whereas in Las Vegas, skyscrapers are primarily residential or hotels (located in the Las Vegas Strip). Las Vegas is the only city where hotels are over 10%! (However, it is important to note that in raw numbers, New York has more skyscraper hotels).
 				<br>In Miami, a whopping 81% is used as residential.
 				<br>In New York and Chicago, the percentages for residential and office are not equal, but are still the majority uses for skyscrapers.</p><br>
 		</section>
@@ -194,7 +199,7 @@ slider.oninput = function() {
 		<div class="container">
 			<section>
 				<h2>How do U.S. skyscrapers compare globally?</h2>
-				<p>See how U.S. skyscrapers compare to other skyscrapers in the world.
+				<p>See how U.S. skyscrapers compare to other skyscrapers in the world. Images for these buildings are from <a href="http://www.skyscrapercenter.com/">Skyscraper Center</a>.
 				<br><i>Hover</i> over the scaled images for more information.
 				<br><i>Click</i> the boxes next to "Top 1-10" or "Top 1-20" to see more skyscrapers.</p>
 		</section>
@@ -210,7 +215,7 @@ slider.oninput = function() {
 <div class="container">
 				<p>When it comes to seeing how tall U.S. skyscrapers are compared to other countries, only the One World Trade Center (New York City) makes the Top Ten at Rank #6. In the Top 10, Dubai wins with the Burj Khalifa, but China has the most skyscrapers in the top 10.
 				</p>
-				<p>Expanding to the Top 20, we see the U.S. has more skyscrapers with the <i>Willis Tower</i> (Chicago) at Rank #14, <i>432 Park Avenue</i> (New York City) at Rank #17, and <i>Trump Int. Hotel & Tower</i> (Chicago) at Rank #19. However, China still has the majority for number of skyscrapers in the top 20.<br>
+				<p>Expanding to the Top 20, we see the U.S. has more skyscrapers with the <i>Willis Tower</i> (Chicago) at Rank #14, <i>432 Park Avenue</i> (New York City) at Rank #17, and <i>Trump Int. Hotel & Tower</i> (Chicago) at Rank #19. However, China still has the majority for number of skyscrapers in the top 20.<br><br>
 		</section>
 	</div>
 
