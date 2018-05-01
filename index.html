@@ -59,7 +59,10 @@
 		<div class="container">
 			<section>
 				<h2>Project Objectives</h2>
-				<p><b><i>Note:</b></i> We are defining a skyscraper as any building with height &ge; 130m. The skyscrapers used for these visualizations are only <b> completed</b> ones.</p>
+				<p><b><i>Note:</b></i> We are defining a skyscraper as any building with height &ge; 130m.
+				<br>The skyscrapers used for these visualizations are only <b> completed</b> ones.
+				<br>Because most skyscrapers are multipurpose, for simplicity, we used a <b> main </b> purpose (what most of the floors occupy).</p>
+				<br>
 				<p>-Which are the tallest buildings in the US? (and how tall are they, relative to other tall buildings in this dataset?)</p>
 				<p>-Where are the tallest buildings in the US? Does a certain city/state have the most tall buildings?</p>
 				<p>-What are the purposes of these skyscrapers (casinos, offices, hotels, residential, etc)?</p>
@@ -84,7 +87,7 @@
 				<h2>Skyscraper construction over the years</h2>
 				<p> The line chart below shows the number of skyscrapers cumlatively existing in the US over the years.
 				<br><i>Hover</i> over a category name for brushing (other lines will be grayed out)
-				<br><i>Click</i> on a category name to remove it, and click again to bring it back</p>
+				<br><i>Click</i> on a category name to remove it, and click again to bring it back</p><br>
 		</section>
 	</div>
 
@@ -108,7 +111,7 @@
 <!-- Header for map -->
 <div class="container">
 			<section><h2>Breakdown by city</h2>
-				<p> Use the slider below to see how many skyscrapers existed in a city during a given year.</p><br>
+				<p> Use the slider below to see how many skyscrapers existed in a city during a given year.</p><br><br>
 		</section>
 	</div>
 
@@ -139,7 +142,8 @@ slider.oninput = function() {
 <!-- Header for waffle  -->
 <div class="container">
 			<section><h2>Breakdown by category, by city</h2>
-				<p>placeholder for instructions</p><br>
+				<p>See what skyscrapers are used for overall & in the 6 cities with the most skyscrapers.
+				<br>If a city contains more than 1 skyscraper in "other", <i>hover</i> over the grid for more information.</p><br>
 		</section>
 	</div>
 
@@ -152,14 +156,20 @@ slider.oninput = function() {
 
 <!-- Waffle analysis  -->
 <div class="container">
-			<section><p>Placeholder for analysis</p><br>
+			<section><p>Based on "All", we can see that U.S. skyscrapers are mainly used for <i>office</i>, then <i> residential</i>, and then <i>hotel</i>.
+			<br>It is interesting to see the makeup of what skyscrapers are used as you compare city by city.
+				<br>When you look at San Francisco, a tech hub, it makes sense that 75% of skyscrapers are used as offices. This majority is also found in Houston, where 87% are used as offices.
+				<br>Whereas in Las Vegas, skyscrapers are primarily residential or hotels (located in the Las Vegas Strip).
+				<br>In Miami, a whopping 81% is used as residential.
+				<br>In New York and Chicago, the percentages for residential and office are not equal, but are still the majority uses for skyscrapers.</p><br>
 		</section>
 	</div>
 
 <!-- Header for bar -->
 <div class="container">
 			<section><h2>Tallest in each city</h2>
-				<p>placeholder for instructions</p><br>
+				<p>Use the dropdown menu to see the tallest skyscrapers overall & in any city that has more than 10 skyscrapers.
+				<br><i>Hover</i> over a bar for more details. If a skyscraper has more than one purpose, all are listed, but the <i>main purpose is italicized.</i></p><br>
 		</section>
 	</div>
 
@@ -171,7 +181,11 @@ slider.oninput = function() {
 
 <!-- Bar analysis -->
 <div class="container">
-				<p>placeholder for analysis</p><br>
+				<p>The tallest skyscrapers in the U.S. is the <i>One World Trade Center</i> in New York City.
+				<br>Of the Top 10 Overall, the majority of skyscrapers are located in either New York City or Chicago.
+				<br>When comparing city to city, it seems that <i>New York City</i> is home to the tallest skyscrapers and Chicago in second place. Other cities contain skyscrapers, but their top 10 are significantly shorter than those in New York or Chicago.
+				<br>It seems that most of the top 10 overall and city-wise are used as office or residential buildings. The tallest usually also contain an observation deck.
+				</p><br>
 		</section>
 	</div>
 </div> <!-- end container -->
@@ -180,7 +194,9 @@ slider.oninput = function() {
 		<div class="container">
 			<section>
 				<h2>How do U.S. skyscrapers compare globally?</h2>
-				<p> Placeholder for instructions </p>
+				<p>See how U.S. skyscrapers compare to other skyscrapers in the world.
+				<br><i>Hover</i> over the scaled images for more information.
+				<br><i>Click</i> the boxes next to "Top 1-10" or "Top 1-20" to see more skyscrapers.</p>
 		</section>
 	</div>
 
@@ -192,7 +208,9 @@ slider.oninput = function() {
 
 <!-- World analysis -->
 <div class="container">
-				<p>placeholder for analysis</p><br>
+				<p>When it comes to seeing how tall U.S. skyscrapers are compared to other countries, only the One World Trade Center (New York City) makes the Top Ten at Rank #6. In the Top 10, Dubai wins with the Burj Khalifa, but China has the most skyscrapers in the top 10.
+				</p>
+				<p>Expanding to the Top 20, we see the U.S. has more skyscrapers with the <i>Willis Tower</i> (Chicago) at Rank #14, <i>432 Park Avenue</i> (New York City) at Rank #17, and <i>Trump Int. Hotel & Tower</i> (Chicago) at Rank #19. However, China still has the majority for number of skyscrapers in the top 20.<br>
 		</section>
 	</div>
 
