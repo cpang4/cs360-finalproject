@@ -1,6 +1,6 @@
 var margin_world = {top: 100, right: 50, bottom: 50, left: 100},
     width_world = 1200 - margin_world.left - margin_world.right,
-    height_world = 600 - margin_world.top - margin_world.bottom;
+    height_world = 550 - margin_world.top - margin_world.bottom;
 
 var xScaleWorld = d3.scaleBand()
               .domain([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
