@@ -41,7 +41,7 @@ var svg_world = d3.select("#viz5").select("#worldBar")
       .style("text-anchor", "middle")
       .attr("font-family", "Chivo")
       .attr("font-weight", "400")
-      .attr("font-size", "11px")
+      .attr("font-size", "12px")
       .text("Height (m)");
 
   svg_world.append("text")
@@ -56,7 +56,7 @@ var svg_world = d3.select("#viz5").select("#worldBar")
         .attr("transform", "translate(" + width_world/2 + "," + (height_world+30) + ")")
         .style("text-anchor", "middle")
         .attr("font-family", "Chivo")
-        .attr("font-size", "11px")
+        .attr("font-size", "12px")
         .attr("font-weight", "400")
         .text("Rank");
 
