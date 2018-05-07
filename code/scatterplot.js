@@ -122,7 +122,7 @@ var divisionList = [
             .attr("y", 0)
             .style("text-anchor", "middle")
             .attr("font-family", "Chivo")
-            .attr("font-weight", "400")
+            .attr("font-weight", "300")
             .attr("font-size", "20px")
             .text("Skyscraper Construction Density");
 
@@ -136,7 +136,7 @@ var divisionList = [
             .attr("y", 40)
             .style("text-anchor", "end")
             .attr("font-weight", "400")
-            .attr("font-size", "11px")
+            .attr("font-size", "12px")
             .text("Year");
 
 
