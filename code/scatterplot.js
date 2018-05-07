@@ -118,13 +118,13 @@ var divisionList = [
         //  
         svg_scatter.append("text")
             .attr("class", "label")
-            .attr("x", width_scatter-300)
+            .attr("x", width_scatter/2)
             .attr("y", 0)
-            .style("text-anchor", "end")
+            .style("text-anchor", "middle")
             .attr("font-family", "Chivo")
             .attr("font-weight", "400")
             .attr("font-size", "20px")
-            .text("Skyscraper Clusters");
+            .text("Skyscraper Construction Density");
 
         svg_scatter.append("g")
             .attr("class", "xaxis")
