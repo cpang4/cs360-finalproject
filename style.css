@@ -101,8 +101,10 @@
 }
 
 .slider {
+  position:relative;
+  left:200px;
     -webkit-appearance: none;
-    width: 65%;
+    width: 600px;
     height: 25px;
     background: #d3d3d3;
     outline: none;
