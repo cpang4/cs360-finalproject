@@ -59,7 +59,7 @@
         <div class="container">
             <section>
                 <h2>Project Objectives</h2>
-                <p><b><i>Note:</b></i> We are defining a skyscraper as any building with height &ge; 130m.
+                <p><b><i>Note:</b></i> We are defining a skyscraper as any building with <b>height &ge; 130m</b>.
                 <br>The skyscrapers used for these visualizations are only <b> completed</b> ones.
                 <br>Because most skyscrapers are multipurpose, for simplicity, we used a <b> main </b> purpose (what most of the floors occupy).</p>
                 <br>
@@ -86,6 +86,7 @@
             <section>
                 <h2>Skyscraper construction over the years</h2>
                 <p> The line chart below shows the number of skyscrapers cumlatively existing in the US over the years.
+                <br>(All is the total of office, residential, hotel & other.)
                 <br><i>Hover</i> over a category name for brushing (other lines will be grayed out).
                 <br><i>Click</i> on a category name to remove it, and click again to bring it back.</p><br>
         </section>
@@ -120,10 +121,10 @@
     </div>
 
 <div id="viz2">
-  <center>
   <input type="range" min="1912" max="2016" step="1" value="1912" class="slider" id="slider">
-  <br>
-  <p><font face= "Chivo">Year: </font><span id="demo"></span></p>
+  <br><p>
+ 	<font face= "Chivo" style="position:relative; left:450px;">Year: </font>
+  	<font face="Chivo"><span id="demo" style="position:relative; left:450px;"></span></font></p>
 
 <script>
 var slider = document.getElementById("slider");
@@ -133,7 +134,7 @@ output.innerHTML = slider.value;
 slider.oninput = function() {
   output.innerHTML = this.value;
 }
-</script></center>
+</script>
 <svg id="map" height="550" width="1000"></svg>
 <script src="code/map.js"></script></div>
 
