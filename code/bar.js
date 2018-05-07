@@ -51,7 +51,7 @@ d3.csv("data/skyscrapers-top10.csv", function(data){
       .style("text-anchor", "middle")
       .attr("font-family", "Chivo")
       .attr("font-weight", "400")
-      .attr("font-size", "11px")
+      .attr("font-size", "12px")
       .text("Height (m)");
 
     svg_bar.append("text")
@@ -66,7 +66,7 @@ d3.csv("data/skyscrapers-top10.csv", function(data){
         .attr("transform", "translate(" + width_bar/2 + "," + (height_bar+40) + ")")
         .style("text-anchor", "middle")
         .attr("font-family", "Chivo")
-        .attr("font-size", "11px")
+        .attr("font-size", "12px")
         .attr("font-weight", "400")
         .text("Rank");
 
