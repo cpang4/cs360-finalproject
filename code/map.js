@@ -66,10 +66,10 @@ function makeMyMap(error, us, skyscrapers){
 
         if (newData[d].count > 0){
 
-          // position tooltip outside of circle
+          // position tooltip centered, outside of circle
+          var xpos = projection(newData[d].coord)[0] - 50;
+          var ypos = projection(newData[d].coord)[1] - ((+newData[d].count)/5) - 37.5;
 
-          var xpos = projection(newData[d].coord)[0] - 20 - (+newData[d].count)/5;
-          var ypos = projection(newData[d].coord)[1] - 2.5 - (+newData[d].count)/5 - 35;
 
           var info = "<b>" + d + "</b><br>" + newData[d].count;
 
