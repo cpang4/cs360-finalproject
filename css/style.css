@@ -979,12 +979,12 @@
 /* Banner */
 
 	#banner {
-		background-color: #666666;
+		background-color: #989898;
 		/*background-image: url("../images/banner.jpg");*/
 		background-size: cover;
 		background-position: center center;
 		background-repeat: no-repeat;
-		color: #d8d8d8;
+		color: white;
 		padding: 14em 0;
 		text-align: center;
 		position: relative;
