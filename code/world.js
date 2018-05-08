@@ -1,5 +1,5 @@
-var margin_world = {top: 100, right: 50, bottom: 50, left: 100},
-    width_world = 1200 - margin_world.left - margin_world.right,
+var margin_world = {top: 100, right: 50, bottom: 50, left: 30},
+    width_world = 1100 - margin_world.left - margin_world.right,
     height_world = 550 - margin_world.top - margin_world.bottom;
 
 var xScaleWorld = d3.scaleBand()
@@ -31,18 +31,16 @@ var svg_world = d3.select("#viz5").select("#worldBar")
 
   svg_world.append("g")
       .attr("class", "yaxis")
-      .call(yAxisWorld);
-
-   svg_world.append("text")
+      .call(yAxisWorld)
+      .append("text")
       .attr("transform", "rotate(-90)")
-      .attr("y", 0 - margin_world.left/2)
-      .attr("x",0 - (height_world / 2))
-      .attr("dy", "1em")
-      .style("text-anchor", "middle")
-      .attr("font-family", "Chivo")
-      .attr("font-weight", "400")
+      .attr("y", 6)
+      .attr("dy", "0.71em")
+      .style("font-family", "Chivo")
       .attr("font-size", "12px")
+      .attr("font-weight", "400")
       .text("Height (m)");
+
 
   svg_world.append("text")
         .attr("transform", "translate(" + width_world/2 + "," + -30 + ")")
@@ -171,17 +169,15 @@ var svg_world = d3.select("#viz5").select("#worldBar")
         })
 
         svg_world.append("text")
-          .attr("x", width_world-100)
-          .attr("y", 35)
+          .attr("x", width_world-120)
+          .attr("y", 33)
           .attr("font-family", "Chivo")
-          .attr("text-anchor", "middle")
           .text("Top 1-10");
 
         svg_world.append("text")
-          .attr("x", width_world-95)
-          .attr("y", 65)
+          .attr("x", width_world-120)
+          .attr("y", 63)
           .attr("font-family", "Chivo")
-          .attr("text-anchor", "middle")
           .text("Top 11-20");
 
        svg_world.append("rect")
