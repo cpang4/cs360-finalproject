@@ -1,5 +1,6 @@
 Data used in the various visualizations.   
 
+_/images_ contains the images used in the world visualization   
 _skyscrapers-count.csv_ used in the line chart   
 _skyscrapers-main.csv_ used in the symbol map, scatterplot, & icon array   
 _skyscrapers-top10.csv_ used in bar chart   
