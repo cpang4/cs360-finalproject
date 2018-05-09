@@ -131,41 +131,42 @@ var svg_world = d3.select("#viz5").select("#worldBar")
         .attr("stroke", "black")
         .on("click", function(d){
 
-          top1 = !top1;
-          top2 = !top2;
+          if (top1 != true){
+            top1 = !top1;
+            top2 = !top2;
 
-          d3.select("#top1").transition()
-          .style("fill-opacity", function(d){
-            if (top1){
-              return 0.5;
-            }
-            else return 0;
-          })
+            d3.select("#top1").transition()
+            .style("fill-opacity", function(d){
+              if (top1){
+                return 0.5;
+              }
+              else return 0;
+            })
 
-          d3.select("#top2").transition()
-          .style("fill-opacity", function(d){
-            if (top2){
-              return 0.5;
-            }
-            else return 0;
-          })
+            d3.select("#top2").transition()
+            .style("fill-opacity", function(d){
+              if (top2){
+                return 0.5;
+              }
+              else return 0;
+            })
 
-          xScaleWorld.domain([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
-          svg_world.selectAll(".xaxis").transition().call(xAxisWorld);
+            xScaleWorld.domain([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+            svg_world.selectAll(".xaxis").transition().call(xAxisWorld);
 
-          svg_world.selectAll(".images")
-                .data(data.filter(function(d){ return +d.rank <= 10;}))
-                .transition()
-                .delay(function(d, i) {
-                   return i * 200;
-                 })
-                .duration(500)
-                .attr("x", function(d){return xScaleWorld(+d.rank)})
-                .attr("y", function(d){return yScaleWorld(d.height)})
-                .attr("width", 100)
-                .attr("height", function(d){return height_world-yScaleWorld(d.height)})
-                .attr("xlink:href", function(d){return "code/images/" + d.link})
-
+            svg_world.selectAll(".images")
+                  .data(data.filter(function(d){ return +d.rank <= 10;}))
+                  .transition()
+                  .delay(function(d, i) {
+                     return i * 200;
+                   })
+                  .duration(500)
+                  .attr("x", function(d){return xScaleWorld(+d.rank)})
+                  .attr("y", function(d){return yScaleWorld(d.height)})
+                  .attr("width", 100)
+                  .attr("height", function(d){return height_world-yScaleWorld(d.height)})
+                  .attr("xlink:href", function(d){return "code/images/" + d.link})
+          }
         })
 
         svg_world.append("text")
@@ -194,41 +195,43 @@ var svg_world = d3.select("#viz5").select("#worldBar")
         .attr("stroke", "black")
         .on("click", function(d){
 
-          top1 = !top1;
-          top2 = !top2;
+          if (top2 != true){
+            top1 = !top1;
+            top2 = !top2;
 
-          d3.select("#top1").transition()
-          .style("fill-opacity", function(d){
-            if (top1){
-              return 0.5;
-            }
-            else return 0;
-          })
+            d3.select("#top1").transition()
+            .style("fill-opacity", function(d){
+              if (top1){
+                return 0.5;
+              }
+              else return 0;
+            })
 
-          d3.select("#top2").transition()
-          .style("fill-opacity", function(d){
-            if (top2){
-              return 0.5;
-            }
-            else return 0;
-          })
+            d3.select("#top2").transition()
+            .style("fill-opacity", function(d){
+              if (top2){
+                return 0.5;
+              }
+              else return 0;
+            })
 
 
-          xScaleWorld.domain([11, 12, 13, 14, 15, 16, 17, 18, 19, 20]);
-          svg_world.selectAll(".xaxis").transition().call(xAxisWorld);
+            xScaleWorld.domain([11, 12, 13, 14, 15, 16, 17, 18, 19, 20]);
+            svg_world.selectAll(".xaxis").transition().call(xAxisWorld);
 
-          svg_world.selectAll(".images")
-                .data(data.filter(function(d){ return +d.rank > 10;}))
-                .transition()
-                .delay(function(d, i) {
-                   return i * 200;
-                 })
-                .duration(500)
-                .attr("x", function(d){return xScaleWorld(+d.rank)})
-                .attr("y", function(d){return yScaleWorld(d.height)})
-                .attr("width", 100)
-                .attr("height", function(d){return height_world-yScaleWorld(d.height)})
-                .attr("xlink:href", function(d){return "code/images/" + d.link})
+            svg_world.selectAll(".images")
+                  .data(data.filter(function(d){ return +d.rank > 10;}))
+                  .transition()
+                  .delay(function(d, i) {
+                     return i * 200;
+                   })
+                  .duration(500)
+                  .attr("x", function(d){return xScaleWorld(+d.rank)})
+                  .attr("y", function(d){return yScaleWorld(d.height)})
+                  .attr("width", 100)
+                  .attr("height", function(d){return height_world-yScaleWorld(d.height)})
+                  .attr("xlink:href", function(d){return "code/images/" + d.link})
+          }
 
         })
     }
