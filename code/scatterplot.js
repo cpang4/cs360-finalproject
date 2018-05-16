@@ -33,12 +33,12 @@ var divisionList = [
         height_scatter = 550 - margin_scatter.top - margin_scatter.bottom;
 
     var dotRadius = 4; // Dot radius
-    var dotRadiusHover = 10; // Dot radius when mouse hover over
+    var dotRadiusHover = 7; // Dot radius when mouse hover over
     var dotStrokeWidth = 0.5; // Dot border width
-    var dotFillOpacity = 0.8; // Dot fill opacity
+    var dotFillOpacity = 0.6; // Dot fill opacity
     var dotStroke = "#999"; // Dot border color
-    var dotHoverColor = "#e34a33"; // Dot color when mouse hover over
-    var allStatesColor = "#9ecae1"; // Dot color when "All States" selected
+    var dotHoverColor = "orange"; // Dot color when mouse hover over
+    var allStatesColor = "#4682b4"; // Dot color when "All States" selected
     var divisionColors = ['#e41a1c', '#377eb8', '#4daf4a', '#984ea3', '#ff7f00', '#ffff33', '#a65628', '#f781bf', '#999999'];
     
     var heightFormater = d3.format(".5n");
@@ -89,7 +89,7 @@ var divisionList = [
     var legend_scatter = svg_scatter.append("g")
         .attr("class", "legend");
 
-    renderLegend();
+    // renderLegend();
 
     d3.csv("data/skyscrapers-main.csv", function (error, data) {    
         if (error) throw error;
@@ -168,7 +168,7 @@ var divisionList = [
             .attr("cy", function (d) {
                 return yScatter(d.buildingHeight);
             })
-            .style("fill", getDotFillColor)
+            .style("fill", allStatesColor)
             .style("fill-opacity", dotFillOpacity)
             .style("stroke", dotStroke)
             .style("stroke-width", dotStrokeWidth)
@@ -180,7 +180,6 @@ var divisionList = [
     function showTooltip(d) {    
         // Increase the size and change the color of the dot
         d3.select(this).raise()
-            .transition()
             .attr("r", dotRadiusHover)
             .style("fill", dotHoverColor);
 
@@ -232,9 +231,8 @@ var divisionList = [
     function hideTooltip() {
         // Reset the size and color of the dot
         d3.select(this)
-            .transition()
             .attr("r", dotRadius)
-            .style("fill", getDotFillColor);
+            .style("fill", allStatesColor);
         // Hide the tooltip
         svg_scatter.selectAll(".tooltipScatter").remove();
 
@@ -243,11 +241,11 @@ var divisionList = [
     function filterDots() {
         if (currentDropedownSelected === "All States") { // Show all states
             svg_scatter.selectAll(".dot")
-                .style("fill", getDotFillColor)
+                .style("fill", allStatesColor)
                 .style("display", "inline");
         } else if (allRegions.indexOf(currentDropedownSelected) !== -1) { // Show selected region
             svg_scatter.selectAll(".dot")
-                .style("fill", getDotFillColor)
+                .style("fill", allStatesColor)
                 .style("display", function(d) {
                     if (d.region === currentDropedownSelected) {
                         return "inline";
@@ -257,7 +255,7 @@ var divisionList = [
                 });
         } else { // Show selected city
             svg_scatter.selectAll(".dot")
-                .style("fill", getDotFillColor)
+                .style("fill", allStatesColor)
                 .style("display", function (d) {
                     if (d.city === currentDropedownSelected) {
                         return "inline";
@@ -308,13 +306,6 @@ var divisionList = [
                 return "translate(0," + i * 20 + ")";
             });
         
-        legendItem.append("rect")
-            .attr("x", width)
-            .attr("width", 18)
-            .attr("height", 18)
-            .style("fill-opacity", 0.9)
-            .style("fill", function(d) { return d.color; });
-        
         legendItem.append("text")
             .attr("x", width + 20)
             .attr("y", 9)
@@ -341,10 +332,4 @@ var divisionList = [
         }
     }
 
-    function getDotFillColor(d) { // Get the color of the dot
-        if (currentDropedownSelected === "All States") {
-            return allStatesColor;
-        } else {
-            return color(d.division);
-        }
-    }
+   
