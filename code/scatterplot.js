@@ -38,7 +38,7 @@ var divisionList = [
     var dotFillOpacity = 0.6; // Dot fill opacity
     var dotStroke = "#999"; // Dot border color
     var dotHoverColor = "orange"; // Dot color when mouse hover over
-    var allStatesColor = "#4682b4"; // Dot color when "All States" selected
+    var allStatesColor = "#9ecae1"; // Dot color when "All States" selected
     var divisionColors = ['#e41a1c', '#377eb8', '#4daf4a', '#984ea3', '#ff7f00', '#ffff33', '#a65628', '#f781bf', '#999999'];
     
     var heightFormater = d3.format(".5n");
