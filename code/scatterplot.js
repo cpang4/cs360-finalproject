@@ -218,7 +218,7 @@ var divisionList = [
         svg_scatter.append("foreignObject")
           .attr("class", "tooltipScatter")
           .attr("width", 200)
-          .attr("height", 50)
+          .attr("height", 80)
           .attr("x", xPosition+5)
           .attr("y", yPosition+3)
           .style("font", "10px 'Chivo'")
